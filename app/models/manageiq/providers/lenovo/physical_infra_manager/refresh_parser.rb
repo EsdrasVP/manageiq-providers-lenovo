@@ -109,7 +109,7 @@ module ManageIQ::Providers::Lenovo
     def get_physical_switches
       @all_physical_switches ||= @connection.discover_switches
 
-      process_collection(@all_physical_switches, :physical_switches) do |physical_switch|
+      process_collection(@all_physical_switches, :switches) do |physical_switch|
         @parser.parse_physical_switch(physical_switch)
       end
     end
